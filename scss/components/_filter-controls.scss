@@ -1,0 +1,49 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+/* =======================================
+    *filter-controls 
+========================================= */
+
+.filter {
+  &-search {
+    position: relative;
+  }
+
+  &-icon {
+    position: absolute;
+    width: 23px;
+    top: 8px;
+    right: 20px;
+  }
+
+  &-input {
+    padding: 0.5em;
+    width: 100%;
+    border: none;
+    border-radius: $border-radius;
+    margin-bottom: 0.7em;
+    &::placeholder {
+      font-size: 1.2rem;
+    }
+  }
+
+  & select {
+    padding: 0.3em 0.5em;
+    background-color: $white;
+    border-radius: $border-radius;
+    border: none;
+  }
+
+  &-options {
+    @include flex;
+
+    label {
+      margin-right: 0.6em;
+    }
+  }
+
+  &-options > * + * {
+    margin-left: 1em;
+  }
+}

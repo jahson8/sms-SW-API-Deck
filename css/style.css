@@ -366,7 +366,7 @@ html {
       *General Element Styles
   ====================*/
 html {
-  font-size: 1em;
+  font-size: 1.125em;
 }
 
 body {
@@ -416,7 +416,7 @@ a {
   padding: 0.3em 0.6em;
   border-radius: 0.3em;
   background-color: lightgray;
-  font-size: 0.9rem;
+  font-size: 0.79rem;
 }
 .page-header-tab + .page-header-tab, .page-header-tab > * + * {
   margin-left: 0.3em;
@@ -435,7 +435,7 @@ a {
   border: 1px solid #b8b8b8;
   background-color: inherit;
 }
-@media (min-width: 22em) {
+@media (min-width: 25em) {
   .page-header-tab {
     font-size: 1rem;
   }
@@ -469,10 +469,48 @@ a {
   content: "";
 }
 .breadcrumbs a {
-  font-size: 1.2rem;
+  font-size: 0.95rem;
 }
 .breadcrumbs li:last-child a {
   font-weight: 300;
+}
+
+/* =======================================
+    *filter-controls 
+========================================= */
+.filter-search {
+  position: relative;
+}
+.filter-icon {
+  position: absolute;
+  width: 23px;
+  top: 8px;
+  right: 20px;
+}
+.filter-input {
+  padding: 0.5em;
+  width: 100%;
+  border: none;
+  border-radius: 0.3em;
+  margin-bottom: 0.7em;
+}
+.filter-input::placeholder {
+  font-size: 1.2rem;
+}
+.filter select {
+  padding: 0.3em 0.5em;
+  background-color: #fff;
+  border-radius: 0.3em;
+  border: none;
+}
+.filter-options {
+  display: flex;
+}
+.filter-options label {
+  margin-right: 0.6em;
+}
+.filter-options > * + * {
+  margin-left: 1em;
 }
 
 /*# sourceMappingURL=style.css.map */

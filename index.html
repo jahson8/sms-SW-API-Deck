@@ -40,16 +40,25 @@
       </nav>
 
       <!-- *Card Filter Controls -->
-      <div class="card-list-controls">
-        <input type="text" placeholder="Search" />
-        <div class="card-filter">
-          <div class="card-filter-select">
+      <div class="filter">
+        <div class="filter-search">
+          <img
+            src="images/Interview-Assets/Search.svg"
+            alt="Search icon"
+            class="filter-icon"
+          />
+          <input type="text" placeholder="Search" class="filter-input" />
+        </div>
+
+        <div class="filter-options">
+          <div class="filter-select">
             <label for="options">Sort By</label
             ><select name="sort-option" id="options">
               <option value="home_world">home World</option>
             </select>
           </div>
-          <div class="card-filter-btns">
+
+          <div class="filter-btns">
             <button class="card-filter-btn">ASC</button>
             <button class="card-filter-btn">DESC</button>
           </div>
@@ -57,7 +66,7 @@
       </div>
       <main>
         <!-- *Card Gallery -->
-        <ul class="cards">
+        <ul class="card-galllery">
           <li class="card">
             <div class="card__header">
               <div class="card-container">

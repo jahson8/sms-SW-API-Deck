@@ -28,7 +28,7 @@
     padding: 0.3em 0.6em;
     border-radius: $border-radius;
     background-color: color.adjust($color-primary, $lightness: -7%);
-    font-size: 0.9rem;
+    font-size: 0.79rem;
   }
 
   &-header-tab + &-header-tab,
@@ -53,7 +53,7 @@
     background-color: inherit;
   }
 
-  @media (min-width: 22em) {
+  @media (min-width: 25em) {
     &-header-tab {
       font-size: 1rem;
     }
