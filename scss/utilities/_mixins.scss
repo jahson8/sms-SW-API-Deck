@@ -1,0 +1,5 @@
+// flex declaration
+@mixin flex {
+  display: flex;
+  @content;
+}

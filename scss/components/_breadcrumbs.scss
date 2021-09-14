@@ -1,0 +1,30 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+/* =======================================
+    *BreadCrumb Nav
+========================================= */
+
+.breadcrumbs {
+  margin-bottom: 1em;
+  & ul {
+    @include flex;
+  }
+
+  & ul > *::after {
+    content: "\003E";
+    margin: 0 0.5em;
+  }
+
+  & ul > *:last-child::after {
+    content: "";
+  }
+
+  a {
+    font-size: 1.2rem;
+  }
+
+  li:last-child a {
+    font-weight: 300;
+  }
+}
