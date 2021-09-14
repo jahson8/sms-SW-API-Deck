@@ -1,0 +1,50 @@
+@use "../utilities/variables" as *;
+
+/* =================
+    *Reset Border Box
+====================*/
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* =================
+      *General Element Styles
+  ====================*/
+html {
+  font-size: $base__font-size;
+}
+
+body {
+  font-family: $font-family--primary;
+  font-weight: $font-weight--regular;
+  line-height: $base__line-height;
+  color: $body-color;
+  background-color: $color-primary;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// Page Container styles
+.container {
+  width: 90%;
+  margin: 0 auto;
+
+  @media (min-width: 48em) {
+    width: 85%;
+    max-width: 1200px;
+  }
+}

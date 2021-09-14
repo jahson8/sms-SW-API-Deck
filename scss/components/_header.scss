@@ -1,0 +1,74 @@
+@use "../utilities/variables" as *;
+@use "sass:color";
+
+//=========================================
+// *Header
+//==========================================
+
+.page {
+  &-header {
+    padding-top: 1.5em;
+  }
+
+  &-header .container,
+  &-header-tab {
+    display: flex;
+    align-items: center;
+  }
+
+  &-header .container {
+    border-bottom: 2px solid $silver;
+    padding-bottom: 1.1em;
+    margin-bottom: 3em;
+  }
+
+  &-header-tab {
+    padding: 0.2em 0.5em;
+    border-radius: $border-radius;
+    background-color: color.adjust($color-primary, $lightness: -7%);
+    font-size: 0.9rem;
+  }
+
+  &-header-tab + &-header-tab,
+  &-header-tab > * + * {
+    margin-left: 0.3em;
+  }
+
+  &-header-tab.selected {
+    background-color: $white;
+  }
+
+  &-title {
+    display: none;
+    font-weight: $font-weight--regular;
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  &-user {
+    margin-left: auto;
+    border: 1px solid $silver;
+    background-color: inherit;
+  }
+
+  @media (min-width: 22em) {
+    &-header-tab {
+      font-size: 1rem;
+    }
+  }
+
+  //*   Tablet
+  @media (min-width: 48em) {
+    &-header-tab {
+      font-size: 1.14em;
+    }
+  }
+
+  // * Desktop
+  @media (min-width: 64em) {
+    &-title {
+      display: block;
+      margin-left: auto;
+    }
+  }
+}
