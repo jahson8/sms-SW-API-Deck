@@ -393,7 +393,7 @@ a {
 @media (min-width: 48em) {
   .container {
     width: 85%;
-    max-width: 1200px;
+    max-width: 1600px;
   }
 }
 
@@ -477,6 +477,7 @@ a {
 ========================================= */
 .filter {
   font-size: 0.9em;
+  margin-bottom: 2em;
 }
 .filter-search {
   position: relative;
@@ -543,10 +544,75 @@ a {
 }
 
 /* =======================================
+    *Card Gallery Styles
+========================================= */
+@media (min-width: 48em) {
+  .card-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 1.5em;
+  }
+}
+@media (min-width: 64em) {
+  .card-gallery {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.6em;
+  }
+}
+
+/* =======================================
     *Card Styles
 ========================================= */
+.card {
+  background-color: #fff;
+  border-radius: 0.5em;
+  margin-bottom: 2em;
+}
+.card svg {
+  stroke: #fff;
+}
+.card-container {
+  width: 90%;
+  margin: auto;
+}
+.card-header {
+  background-color: #969696;
+  color: #fff;
+  border-radius: 0.5em 0.5em 0 0;
+  padding-top: 1em;
+}
+.card-body-top, .card-info {
+  display: flex;
+}
+.card-body-top > *:last-child, .card-info > *:last-child {
+  margin-left: auto;
+}
+.card p {
+  margin: 0;
+}
+.card img + p {
+  margin-left: 0.6em;
+}
+.card-body-top {
+  padding-bottom: 0.5em;
+  border-bottom: 2px solid #b8b8b8;
+}
+.card-body-end {
+  padding-bottom: 1.5em;
+  margin-top: 1em;
+}
+.card-info {
+  background-color: #ededed;
+  padding: 0.6em;
+  border-radius: 0.3em;
+}
+.card-info + .card-info {
+  margin-top: 0.6em;
+}
+
 /* =======================================
-    *filter-controls 
+    *helper classes
 ========================================= */
 .selected {
   background-color: #fff;

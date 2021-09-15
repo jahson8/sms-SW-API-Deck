@@ -1,0 +1,17 @@
+/* =======================================
+    *Card Gallery Styles
+========================================= */
+
+.card-gallery {
+  @media (min-width: 48em) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 1.5em;
+  }
+
+  @media (min-width: 64em) {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.6em;
+  }
+}

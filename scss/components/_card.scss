@@ -1,3 +1,66 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
 /* =======================================
     *Card Styles
 ========================================= */
+
+.card {
+  background-color: $white;
+  border-radius: 0.5em;
+  margin-bottom: 2em;
+
+  & svg {
+    stroke: $white;
+  }
+
+  &-container {
+    width: 90%;
+    margin: auto;
+  }
+
+  &-header {
+    background-color: $color-secondary;
+    color: $white;
+    border-radius: 0.5em 0.5em 0 0;
+    padding-top: 1em;
+  }
+
+  &-body-top,
+  &-info {
+    @include flex;
+  }
+
+  &-body-top > *:last-child,
+  &-info > *:last-child {
+    margin-left: auto;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  img + p {
+    margin-left: 0.6em;
+  }
+
+  &-body-top {
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid $silver;
+  }
+
+  &-body-end {
+    padding-bottom: 1.5em;
+    margin-top: 1em;
+  }
+
+  &-info {
+    background-color: $gallery;
+    padding: 0.6em;
+    border-radius: $border-radius;
+
+    & + & {
+      margin-top: 0.6em;
+    }
+  }
+}
