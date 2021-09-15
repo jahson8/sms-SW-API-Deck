@@ -53,14 +53,14 @@
   }
 
   //*   Tablet
-  @media (min-width: 48em) {
+  @media (min-width: $med) {
     &-header-tab {
       font-size: 1.14em;
     }
   }
 
   // * Desktop
-  @media (min-width: 64em) {
+  @media (min-width: $large) {
     &-title {
       display: block;
       margin-left: auto;

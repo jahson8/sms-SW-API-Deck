@@ -349,6 +349,7 @@ template {
   display: none;
 }
 
+/* 768px */
 /* =================
     *Reset Border Box
 ====================*/
@@ -442,7 +443,7 @@ a {
     font-size: 1.14em;
   }
 }
-@media (min-width: 64em) {
+@media (min-width: 64.5em) {
   .page-title {
     display: block;
     margin-left: auto;
@@ -531,7 +532,7 @@ a {
 .filter-btn + .filter-btn {
   margin-left: -6px;
 }
-@media (min-width: 64em) {
+@media (min-width: 64.5em) {
   .filter {
     display: flex;
   }
@@ -554,7 +555,7 @@ a {
     gap: 1.5em;
   }
 }
-@media (min-width: 64em) {
+@media (min-width: 64.5em) {
   .card-gallery {
     grid-template-columns: repeat(5, 1fr);
     gap: 0.6em;
@@ -571,6 +572,7 @@ a {
 }
 .card svg {
   stroke: #fff;
+  width: 1.3em;
 }
 .card-container {
   width: 90%;
@@ -587,6 +589,9 @@ a {
 }
 .card-body-top > *:last-child, .card-info > *:last-child {
   margin-left: auto;
+}
+.card-body-top > *:first-child {
+  flex-basis: 7%;
 }
 .card p {
   margin: 0;
@@ -609,6 +614,11 @@ a {
 }
 .card-info + .card-info {
   margin-top: 0.6em;
+}
+@media (min-width: 64.5em) {
+  .card {
+    font-size: 0.75rem;
+  }
 }
 
 /* =======================================

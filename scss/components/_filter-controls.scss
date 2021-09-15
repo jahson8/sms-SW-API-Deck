@@ -75,7 +75,9 @@
     }
   }
 
-  @media (min-width: 64em) {
+  // Media queries
+
+  @media (min-width: $large) {
     @include flex;
 
     & > * + * {

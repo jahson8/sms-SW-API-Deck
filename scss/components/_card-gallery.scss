@@ -1,16 +1,18 @@
+@use "../utilities/variables" as *;
+
 /* =======================================
     *Card Gallery Styles
 ========================================= */
 
 .card-gallery {
-  @media (min-width: 48em) {
+  @media (min-width: $med) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     gap: 1.5em;
   }
 
-  @media (min-width: 64em) {
+  @media (min-width: $large) {
     grid-template-columns: repeat(5, 1fr);
     gap: 0.6em;
   }

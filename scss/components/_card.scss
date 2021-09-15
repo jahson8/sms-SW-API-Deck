@@ -12,6 +12,7 @@
 
   & svg {
     stroke: $white;
+    width: 1.3em;
   }
 
   &-container {
@@ -34,6 +35,10 @@
   &-body-top > *:last-child,
   &-info > *:last-child {
     margin-left: auto;
+  }
+
+  &-body-top > *:first-child {
+    flex-basis: 7%;
   }
 
   p {
@@ -62,5 +67,9 @@
     & + & {
       margin-top: 0.6em;
     }
+  }
+
+  @media (min-width: $large) {
+    font-size: 0.75rem;
   }
 }
