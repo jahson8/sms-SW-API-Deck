@@ -1,5 +1,15 @@
+@use "../utilities/variables" as *;
+@use "sass:color";
+
 // flex declaration
 @mixin flex {
   display: flex;
   @content;
+}
+
+// tab styles
+@mixin tab {
+  padding: 0.3em 0.6em;
+  border-radius: $border-radius;
+  background-color: color.adjust($color-primary, $lightness: -7%);
 }

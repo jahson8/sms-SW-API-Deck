@@ -421,9 +421,6 @@ a {
 .page-header-tab + .page-header-tab, .page-header-tab > * + * {
   margin-left: 0.3em;
 }
-.page-header-tab.selected {
-  background-color: #fff;
-}
 .page-title {
   display: none;
   font-weight: 400;
@@ -478,6 +475,9 @@ a {
 /* =======================================
     *filter-controls 
 ========================================= */
+.filter {
+  font-size: 0.9em;
+}
 .filter-search {
   position: relative;
 }
@@ -497,8 +497,10 @@ a {
 .filter-input::placeholder {
   font-size: 1.2rem;
 }
+.filter-btn, .filter select {
+  padding: 0.3em 0.6em;
+}
 .filter select {
-  padding: 0.3em 0.5em;
   background-color: #fff;
   border-radius: 0.3em;
   border: none;
@@ -506,11 +508,48 @@ a {
 .filter-options {
   display: flex;
 }
-.filter-options label {
-  margin-right: 0.6em;
+.filter label {
+  margin-right: 0.3em;
 }
 .filter-options > * + * {
-  margin-left: 1em;
+  margin-left: 0.3em;
+}
+.filter-btn {
+  border: 1px solid #b8b8b8;
+  background-color: #d4d4d4;
+}
+.filter-btn:first-of-type {
+  border-radius: 0.3em 0 0 0.3em;
+}
+.filter-btn.selected {
+  background-color: #fff;
+}
+.filter-btn:last-of-type {
+  border-radius: 0 0.3em 0.3em 0;
+}
+.filter-btn + .filter-btn {
+  margin-left: -6px;
+}
+@media (min-width: 64em) {
+  .filter {
+    display: flex;
+  }
+  .filter > * + * {
+    margin-left: 1em;
+  }
+  .filter > *:first-child {
+    flex: 1;
+  }
+}
+
+/* =======================================
+    *Card Styles
+========================================= */
+/* =======================================
+    *filter-controls 
+========================================= */
+.selected {
+  background-color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */

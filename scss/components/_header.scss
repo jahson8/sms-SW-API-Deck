@@ -1,6 +1,5 @@
 @use "../utilities/variables" as *;
 @use "../utilities/mixins" as *;
-@use "sass:color";
 
 /* ========================================
  *Header 
@@ -25,19 +24,13 @@
   }
 
   &-header-tab {
-    padding: 0.3em 0.6em;
-    border-radius: $border-radius;
-    background-color: color.adjust($color-primary, $lightness: -7%);
+    @include tab;
     font-size: 0.79rem;
   }
 
   &-header-tab + &-header-tab,
   &-header-tab > * + * {
     margin-left: 0.3em;
-  }
-
-  &-header-tab.selected {
-    background-color: $white;
   }
 
   &-title {
