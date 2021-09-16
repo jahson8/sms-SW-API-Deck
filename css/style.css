@@ -558,7 +558,8 @@ a {
 @media (min-width: 64.5em) {
   .card-gallery {
     grid-template-columns: repeat(5, 1fr);
-    gap: 0.6em;
+    gap: 1.5em 0.6em;
+    margin-bottom: 2em;
   }
 }
 
@@ -614,6 +615,11 @@ a {
 }
 .card-info + .card-info {
   margin-top: 0.6em;
+}
+@media (min-width: 48em) {
+  .card {
+    margin-bottom: 0;
+  }
 }
 @media (min-width: 64.5em) {
   .card {

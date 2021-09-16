@@ -69,6 +69,10 @@
     }
   }
 
+  @media (min-width: $med) {
+    margin-bottom: 0;
+  }
+
   @media (min-width: $large) {
     font-size: 0.75rem;
   }
