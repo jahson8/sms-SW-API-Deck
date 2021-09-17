@@ -1,13 +1,33 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const api = "https://swapi.dev/api";
-
+  const api = "https://swapi.dev/api/people";
+  let people = [];
   // ------------------------------------------
   //  FETCH FUNCTIONS
   // ------------------------------------------
 
-  function fetchData(url) {
-    return fetch(url).then((res) => res.json());
+  function checkStatus(res) {
+    if (res.ok) {
+      return Promise.resolve(res);
+    } else {
+      return Promise.reject(new Error(res.statusText));
+    }
   }
+
+  function fetchData(url) {
+    return fetch(url)
+      .then(checkStatus)
+      .then((res) => res.json())
+      .catch((err) => console.error("there was a problem fetching data", err));
+  }
+
+  function getAllCards(api) {
+    fetchData(api).then((res) => {
+      res.results.map((card) => generateCard(card));
+      if (res.next) getAllCards(res.next);
+    });
+  }
+
+  getAllCards(api);
 
   // ------------------------------------------
   //  Render Cards
@@ -20,27 +40,17 @@ document.addEventListener("DOMContentLoaded", () => {
    *@param position- where in side the node to insert html (optional)
    */
 
-  function render(HTML, nodeId, position = "afterbegin") {
+  function render(HTML, nodeId, position = "beforeend") {
     let node = document.getElementById(nodeId);
     // Insert to DOM
     node.insertAdjacentHTML(position, HTML);
   }
 
-  function generateCards(data) {
-    let HTML = data
-      .map((card) => {
-        let {
-          gender,
-          homeworld,
-          name,
-          starships,
-          vehicles,
-          birth_year,
-          species,
-        } = card;
+  function generateCard(person) {
+    let { gender, homeworld, name, starships, vehicles, birth_year } = person;
 
-        return `
-      <li class="card">
+    let HTML = `
+      <li class="card" >
       <a href="card-details.html">
         <div class="card-header">
           <div class="card-container">
@@ -114,12 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </a>
     </li>     
       `;
-      })
-      .join("");
 
     render(HTML, "gallery");
   }
-
-  //   fetch peoples resource
-  fetchData(`${api}/people/`).then((data) => generateCards(data.results));
 });

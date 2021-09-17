@@ -4,17 +4,38 @@
     *Card Gallery Styles
 ========================================= */
 
-.card-gallery {
+.gallery {
   @media (min-width: $med) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    gap: 1.5em;
+    &-details,
+    &-cards {
+      display: grid;
+    }
+
+    &-details {
+      grid-template-columns: minmax(auto, 500px);
+      justify-content: center;
+    }
+    &-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      gap: 1.5em;
+    }
   }
 
   @media (min-width: $large) {
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1.5em 0.6em;
-    margin-bottom: 2em;
+    &-cards {
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.6em;
+    }
+
+    &-details {
+      grid-template-columns: minmax(auto, 33%);
+      justify-content: start;
+    }
+  }
+
+  &-details .card {
+    padding-bottom: 5em;
   }
 }
